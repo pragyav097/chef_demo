@@ -8,7 +8,10 @@ pipeline {
       }
       stage('run profile')
       { steps {
-          inspec exec chef_inspec
+          script {
+              sh(script:'inspec exec chef_inspec')
+            }
+          
        }
       }
   }
