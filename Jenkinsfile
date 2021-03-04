@@ -8,7 +8,7 @@ pipeline {
       }
      stage ('run')
       { steps {
-          
+          sh 'inspec exec chef_profile'
           echo "hello.. running"
          }
       }
