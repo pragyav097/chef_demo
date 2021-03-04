@@ -1,10 +1,16 @@
 pipeline {
   agent any
   stages {
-    stage('download profile')
+    stage ('download profile')
       { steps {
-          git url: 'https://github.com/pragyav097/chef_inspec_demo.git'
+          git url: 'git@github.com:pragyav097/chef_inspec_demo.git'
           echo "hello"
+         }
+      }
+     stage ('run')
+      { steps {
+          
+          echo "hello.. running"
          }
       }
      
