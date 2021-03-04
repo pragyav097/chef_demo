@@ -4,7 +4,7 @@ pipeline {
     stage ('download chef')
     {   steps{
       
-        sh 'https://omnitruck.chef.io/install.sh'
+        sh 'wget https://omnitruck.chef.io/install.sh'
         sh 'sudo bash -s -- -P inspec'
       }
     }
